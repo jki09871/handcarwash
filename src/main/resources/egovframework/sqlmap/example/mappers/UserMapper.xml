@@ -12,7 +12,6 @@
                 , #{password})
     </insert>
 
-
     <select id="login" resultType="userVO" parameterType="userVO">
         SELECT
              ID

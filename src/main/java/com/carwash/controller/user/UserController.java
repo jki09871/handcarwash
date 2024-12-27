@@ -41,5 +41,4 @@ public class UserController {
         userService.postJoinForm(userVO);
         return "/userjoin/login";
     }
-
 }

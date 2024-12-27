@@ -12,7 +12,6 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required autocomplete='off'>
         <br><br>
-
         <!-- 이름 입력 -->
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required autocomplete='off'>
