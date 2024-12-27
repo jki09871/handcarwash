@@ -20,7 +20,6 @@
 </body>
 </html>
 <script>
-
     $(document).ready(function (){
 
         let idFail = "${fail}";

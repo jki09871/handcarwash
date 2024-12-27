@@ -10,7 +10,6 @@ import java.util.Date;
 @Setter
 @ToString
 public class UserVO {
-
     private Long id;
     private String name;
     private String password;
