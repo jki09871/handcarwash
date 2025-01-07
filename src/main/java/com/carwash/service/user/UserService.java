@@ -6,4 +6,6 @@ public interface UserService {
     void postJoinForm(UserVO userVO);
 
     UserVO login(UserVO userVO);
+
+    boolean emailValidCheck(String email);
 }
