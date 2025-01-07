@@ -26,13 +26,19 @@ public class UserServiceImpl implements UserService {
 
         userMapper.postJoinForm(userVO);
     }
+
     @Override
     public UserVO login(UserVO userVO) {
-        UserVO selectUser = userMapper.selectUser(userVO);
-        if (selectUser != null){
+        UserVO selectUser = userMapper.findUserByEmail(userVO);
+        if (selectUser != null) {
             passwordEncoder.checkPassword(userVO.getPassword(), selectUser.getPassword());
             return selectUser;
         }
         return null;
+    }
+
+    @Override
+    public boolean emailValidCheck(String email) {
+        return userMapper.emailValidCheck(email);
     }
 }

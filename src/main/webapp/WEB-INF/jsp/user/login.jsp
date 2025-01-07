@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<script src="../../../js/jquery-3.7.1.js"></script>
+<script src="/js/jquery-3.7.1.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +20,6 @@
 </body>
 </html>
 <script>
-
     $(document).ready(function (){
 
         let idFail = "${fail}";

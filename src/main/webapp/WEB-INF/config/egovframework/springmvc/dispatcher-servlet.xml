@@ -62,4 +62,17 @@
 	<!-- /For Pagination Tag -->
 
     <mvc:view-controller path="/cmmn/validator.do" view-name="cmmn/validator"/>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 인터셉터가 적용될 경로 설정 -->
+            <mvc:mapping path="/api/v1/notifications/modified.do" />
+            <mvc:mapping path="/api/v1/notifications/delete.do" />
+            <mvc:mapping path="/api/v1/notifications/write.do" />
+
+            <!-- 인터셉터 클래스 등록 -->
+            <bean class="com.interceptor.AuthorizationInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>
