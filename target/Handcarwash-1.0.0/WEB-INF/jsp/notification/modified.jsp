@@ -6,33 +6,37 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ include file="/WEB-INF/jsp/cmmn/header.jsp" %>
 <script src="/js/jquery-3.7.1.js"></script>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-<div>
+<div class="notification-container">
     <form action="/api/v1/notifications/modified.do" method="post" id="modify">
         <input type="hidden" name="id" id="id" value="${notificationVO.id}">
-        <div>
-            제목<input name="title" value="<c:out value="${notificationVO.title}"/>" >
+
+        <!-- 제목 입력 -->
+        <div class="notification-item">
+            <label for="title">제목</label>
+            <input id="title" name="title" value="<c:out value='${notificationVO.title}'/>">
         </div>
-        <div>
-            내용<textarea name="content" ><c:out value="${notificationVO.content}"/></textarea>
+
+        <!-- 내용 입력 -->
+        <div class="notification-item">
+            <label for="content">내용</label>
+            <textarea id="content" name="content"><c:out value='${notificationVO.content}'/></textarea>
         </div>
-        <c:if test="${sessionScope.login.role == 'ADMIN'}">
-            <button onclick="fnDynamic('M')">수정</button>
-            <button onclick="fnDynamic('L')">목록</button>
-            <button onclick="fnDynamic('R')">취소</button>
-        </c:if>
+
+        <!-- 버튼 영역 -->
+        <div class="notification-actions">
+            <c:if test="${sessionScope.login.role == 'ADMIN'}">
+                <button type="button" class="btn" onclick="fnDynamic('M')">수정</button>
+                <button type="button" class="btn" onclick="fnDynamic('L')">목록</button>
+                <button type="button" class="btn" onclick="fnDynamic('R')">취소</button>
+            </c:if>
+        </div>
     </form>
 </div>
-</body>
-</html>
+
+<%@ include file="/WEB-INF/jsp/cmmn/footer.jsp" %>
+
 <script>
     let form = $('#modify');
     let url = '';
