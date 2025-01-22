@@ -10,13 +10,11 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/api/v1")
-@RequiredArgsConstructor
 public class HomeController {
 
     @GetMapping("/home.do")
     public String home(HttpServletRequest request) {
         HttpSession session = request.getSession();
-        System.out.println("session.getAttribute(\"login\") = " + session.getAttribute("login"));
         return "/home";
     }
 

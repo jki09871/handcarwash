@@ -89,7 +89,7 @@
 
             // 이메일 중복 확인
             $.ajax({
-                url: '/api/v1/auth/emailchecks.do',
+                url: '/api/v1/auth/emailValidCheck.do',
                 method: 'GET',
                 data: { email: email }, // 쿼리 파라미터로 전달
                 dataType: 'json',
