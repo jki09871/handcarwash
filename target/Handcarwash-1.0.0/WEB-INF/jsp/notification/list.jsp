@@ -8,9 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/jsp/cmmn/header.jsp" %>
 <script src="/js/jquery-3.7.1.js"></script>
-<div class="table-container">
+<div class="table-container" >
+    <div style="text-align: center">
+        <h1>공지사항</h1>
+    </div>
     <div class="table-header">
-        <button class="btn write-btn"><a href="/api/v1/notifications/write.do">작성하기</a></button>
+        <c:if test="${sessionScope.login.role == 'ADMIN' }">
+            <button class="btn write-btn"><a href="/api/v1/notifications/write.do">작성하기</a></button>
+        </c:if>
     </div>
     <table class="styled-table">
         <thead>
