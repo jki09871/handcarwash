@@ -31,7 +31,7 @@
         <c:forEach items="${notificationVO}" var="notification">
             <tr>
                 <td style="text-align: center">${notification.id}</td>
-                <td><a href="/api/v1/notifications/read.do?id=${notification.id}">${notification.title}</a></td>
+                <td><a href="/api/v1/notifications/read.do?id=${notification.id}&pageNo=${paginationInfo.currentPageNo}">${notification.title}</a></td>
                 <td>관리자</td>
                 <td>${notification.hits}</td>
                 <td><fmt:formatDate value="${notification.createdAt}" pattern="yyyy-MM-dd"/></td>
@@ -39,7 +39,15 @@
         </c:forEach>
         </tbody>
     </table>
+    <div style="text-align: center">
+        <ui:pagination paginationInfo = "${paginationInfo}" type="text" jsFunction="linkPage"/>
+    </div>
 </div>
 
+<script>
+    function linkPage(pageNo){
+        location.href = "/api/v1/notifications/list.do?pageNo="+pageNo;
+    }
+</script>
 
 <%@ include file="/WEB-INF/jsp/cmmn/footer.jsp" %>

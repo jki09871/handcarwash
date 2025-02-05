@@ -1,6 +1,7 @@
 package com.carwash.service.notification.impl;
 
 import com.carwash.domain.notification.NotificationVO;
+import com.carwash.dto.PagingDTO;
 import com.carwash.repository.mapper.NotificationMapper;
 import com.carwash.service.notification.NotificationService;
 import lombok.RequiredArgsConstructor;
@@ -22,8 +23,8 @@ public class NotificationImpl implements NotificationService {
     }
 
     @Override
-    public List<NotificationVO> notificationList() { // 공지사항 목록
-        return notificationMapper.notificationList();
+    public List<NotificationVO> notificationListPaging(PagingDTO pageNo) { // 공지사항 목록 페이징
+        return notificationMapper.notificationList(pageNo);
     }
 
     @Override
@@ -44,6 +45,11 @@ public class NotificationImpl implements NotificationService {
     @Override
     public void notificationDelete(int id) { // 공지사항 삭제
         notificationMapper.notificationDelete(id);
+    }
+
+    @Override
+    public int notificationTotalCount() {
+        return notificationMapper.notificationTotalCount();
     }
 
 }
