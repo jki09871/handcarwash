@@ -7,11 +7,14 @@
             <h2 class="form-title">Login</h2>
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" name="email" required autocomplete="off" class="form-control custom-input">
+                <input type="text" id="email" name="email" value="${cookie.rememberId.value}"  required autocomplete="off" class="form-control custom-input">
             </div>
             <div class="form-group">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" id="password" name="password" required autocomplete="off" class="form-control custom-input">
+            </div>
+            <div class="form-group">
+                <label><input type="checkbox" name="rememberId"${empty cookie.rememberId.value ? "":"checked" }> 아이디 기억</label>
             </div>
             <div class="form-actions">
                 <button type="submit" class="btn custom-btn">Login</button>

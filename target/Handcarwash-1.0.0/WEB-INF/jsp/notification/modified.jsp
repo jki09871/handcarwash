@@ -11,6 +11,7 @@
 <div class="notification-container">
     <form action="/api/v1/notifications/modified.do" method="post" id="modify">
         <input type="hidden" name="id" id="id" value="${notificationVO.id}">
+        <input type="hidden" name="pageNo" id="pageNo" value="${pageNo}">
 
         <!-- 제목 입력 -->
         <div class="notification-item">
