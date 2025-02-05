@@ -27,7 +27,7 @@
 
     </insert>
 
-    <select id="notificationList" resultMap="notificationVOMap">
+    <select id="notificationList" parameterType="pagingDTO" resultMap="notificationVOMap">
         SELECT
               ID
             , TITLE
@@ -37,6 +37,17 @@
             , DELETED_AT
             , IS_DELETED
             , HITS
+        FROM
+            NOTIFICATION
+        ORDER BY
+            ID DESC
+        LIMIT
+            #{firstRecordIndex}, #{recordCountPerPage}
+    </select>
+
+    <select id="notificationTotalCount"  resultType="int">
+        SELECT
+            COUNT(*)
         FROM
             NOTIFICATION
     </select>

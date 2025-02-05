@@ -8,5 +8,6 @@
 		<typeAlias alias="sampleVO" type="egovframework.example.sample.service.SampleVO"/>
 		<typeAlias alias="userVO" type="com.carwash.domain.user.UserVO"/>
 		<typeAlias alias="notificationVO" type="com.carwash.domain.notification.NotificationVO"/>
+		<typeAlias alias="pagingDTO" type="com.carwash.dto.PagingDTO"/>
     </typeAliases>
 </configuration>

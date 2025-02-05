@@ -1,6 +1,7 @@
 package com.carwash.repository.mapper;
 
 import com.carwash.domain.notification.NotificationVO;
+import com.carwash.dto.PagingDTO;
 import egovframework.rte.psl.dataaccess.mapper.Mapper;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 public interface NotificationMapper {
     void notificationPost(NotificationVO notificationVO); // 공지사항 작상
 
-    List<NotificationVO> notificationList(); // 공지사항 목록
+    List<NotificationVO> notificationList(PagingDTO pageNo); // 공지사항 목록
 
     NotificationVO notificationDetail(int id); // 공지사항 상세보기
 
@@ -18,4 +19,6 @@ public interface NotificationMapper {
     void hitsIncrease(int id); // 조회수 증가
 
     void notificationDelete(int id); // 공지사항 삭제
+
+    int notificationTotalCount();
 }
