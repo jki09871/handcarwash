@@ -39,10 +39,10 @@
     </div>
     <div class="notification-actions">
         <c:if test="${sessionScope.login.role == 'ADMIN'}">
-            <button class="btn"><a href="/api/v1/notifications/modified.do?id=${notificationVO.id}">수정</a></button>
-            <button class="btn"><a href="/api/v1/notifications/delete.do?id=${notificationVO.id}">삭제</a></button>
+            <button class="btn"><a href="/api/v1/notifications/modified.do?id=${notificationVO.id}&pageNo=${pageNo}">수정</a></button>
+            <button class="btn"><a href="/api/v1/notifications/delete.do?id=${notificationVO.id}&pageNo=${pageNo}">삭제</a></button>
         </c:if>
-        <button class="btn"><a href="/api/v1/notifications/list.do">목록</a></button>
+        <button class="btn"><a href="/api/v1/notifications/list.do?pageNo=${pageNo}">목록</a></button>
     </div>
 </div>
 
