@@ -1,7 +1,7 @@
 package com.carwash.repository.mapper;
 
-import com.carwash.domain.notification.NotificationVO;
-import com.carwash.dto.PagingDTO;
+import com.carwash.domain.notification.vo.NotificationVO;
+import com.carwash.domain.dto.PagingDTO;
 import egovframework.rte.psl.dataaccess.mapper.Mapper;
 
 import java.util.List;

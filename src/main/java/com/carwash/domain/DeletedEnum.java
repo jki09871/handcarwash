@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum DeletedEnum {
 
-    ture,
+    TRUE,
     FALSE;
 
 }

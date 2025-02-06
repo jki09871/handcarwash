@@ -1,6 +1,6 @@
 package com.carwash.repository.mapper;
 
-import com.carwash.domain.user.UserVO;
+import com.carwash.domain.user.vo.UserVO;
 import egovframework.rte.psl.dataaccess.mapper.Mapper;
 import org.apache.ibatis.annotations.Param;
 
