@@ -1,7 +1,7 @@
 package com.interceptor;
 
 import com.carwash.domain.user.UserRole;
-import com.carwash.domain.user.UserVO;
+import com.carwash.domain.user.vo.UserVO;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;

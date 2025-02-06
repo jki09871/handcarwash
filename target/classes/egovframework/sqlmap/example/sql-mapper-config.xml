@@ -6,8 +6,9 @@
 		<typeAlias alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
 		<typeAlias alias="searchVO" type="egovframework.example.sample.service.SampleDefaultVO"/>
 		<typeAlias alias="sampleVO" type="egovframework.example.sample.service.SampleVO"/>
-		<typeAlias alias="userVO" type="com.carwash.domain.user.UserVO"/>
-		<typeAlias alias="notificationVO" type="com.carwash.domain.notification.NotificationVO"/>
-		<typeAlias alias="pagingDTO" type="com.carwash.dto.PagingDTO"/>
+		<typeAlias alias="userVO" type="com.carwash.domain.user.vo.UserVO"/>
+		<typeAlias alias="notificationVO" type="com.carwash.domain.notification.vo.NotificationVO"/>
+		<typeAlias alias="pagingDTO" type="com.carwash.domain.dto.PagingDTO"/>
+		<typeAlias alias="freeBoard" type="com.carwash.domain.dto.PagingDTO"/>
     </typeAliases>
 </configuration>
